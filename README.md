@@ -1,2 +1,2 @@
-# laravel_angular_structure
-Laravel &amp; AngularJS 1.6 structure
+# Laravel & AngularJS Structure
+Structure for SPA with AngularJS and REST API with Laravel
