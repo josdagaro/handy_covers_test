@@ -1,0 +1,16 @@
+/node_modules
+/public/node_modules
+/public/transpiled
+/public/hot
+/public/storage
+/storage/*.key
+/vendor
+/.idea
+/.vagrant
+Homestead.json
+Homestead.yaml
+npm-debug.log
+yarn-error.log
+/db_storage
+**/*.mwb.bak
+composer.lock

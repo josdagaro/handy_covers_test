@@ -1,0 +1,11 @@
+import '../global/index';
+import '../main/index';
+/*import '../root/index';
+import '../users/index';
+import '../drivers/index';
+import '../warehouse/index';
+import '../accessLevels/index';
+import '../requests/index';
+import '../riders/index';*/
+import 'font-awesome/css/font-awesome.css!';
+import 'hammerjs';

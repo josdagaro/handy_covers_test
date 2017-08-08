@@ -1,0 +1,38 @@
+version: '2'
+services:
+  server:
+    build:
+      context: ./docker
+      dockerfile: server.dockerfile
+    container_name: server
+    ports:
+      - "80:80"
+      - "443:443"
+      - "81:81"
+    volumes:
+      - .:/var/www/html/
+    networks:
+      - bridge-network
+  composer:
+    image: composer/composer:latest
+    container_name: composer
+    volumes:
+      - .:/app
+    command: install
+  mysql:
+    image: mysql:latest
+    container_name: mysql
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_USER=handy
+      - MYSQL_PASSWORD=handy
+      - MYSQL_DATABASE=handy
+      - MYSQL_ROOT_PASSWORD=handy
+    volumes:
+      - ./db_storage:/var/lib/mysql
+    networks:
+      - bridge-network
+networks:
+  bridge-network:
+    driver: bridge
